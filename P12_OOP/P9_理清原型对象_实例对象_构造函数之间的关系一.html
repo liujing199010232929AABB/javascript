@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P9_理清原型对象实例对象构造函数之间的关系一</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Foo(){};
+            var f1 = new Foo();
+            console.log(Foo.prototype === f1.__proto__)//true
+            console.log(f1.__proto__.__proto__)//object实例
+            console.log(f1.__proto__.__proto__.__proto__)//null
+		</script>
+	</body>
+</html>
